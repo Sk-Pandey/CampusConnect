@@ -14,7 +14,9 @@ const Topbar = () => {
           <button className="cursor-pointer" id="notifications">
             🔔
           </button>
-          <span className="font-sans">Welcome, {user.name}</span>
+          <span className="font-sans">
+            Welcome, {user.name ? user.name : "User"}
+          </span>
           <span className="bg-white rounded-full p-1">🙍‍♂️</span>
         </div>
       </header>
