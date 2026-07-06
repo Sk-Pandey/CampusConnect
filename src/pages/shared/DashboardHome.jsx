@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+import StudentDashboard from "../students/Dashboard";
+import AdminDashboard from "../admins/Dashboard";
 
 const DashboardHome = () => {
-  return <div>DashboardHome</div>;
+  const { user } = useContext(AuthContext);
+  return (
+    <div>
+      {user.role === "admin" ? <AdminDashboard /> : <StudentDashboard />}
+    </div>
+  );
 };
 
 export default DashboardHome;

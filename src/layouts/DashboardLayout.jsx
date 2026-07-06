@@ -7,7 +7,7 @@ const DashboardLayout = () => {
   return (
     <>
       <Topbar />
-      <div>
+      <div className="flex items-center">
         <Sidebar />
         <Outlet />
       </div>
