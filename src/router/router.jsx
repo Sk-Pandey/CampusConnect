@@ -15,7 +15,7 @@ import DashboardHome from "../pages/shared/DashboardHome";
 import CoursesHome from "../pages/shared/CoursesHome";
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     element: <PublicLayout />,
     children: [
       {

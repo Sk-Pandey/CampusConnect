@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 const Topbar = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <>
       <header className="flex items-center justify-between p-2">
@@ -11,7 +14,7 @@ const Topbar = () => {
           <button className="cursor-pointer" id="notifications">
             🔔
           </button>
-          <span className="font-sans">Welcome, User</span>
+          <span className="font-sans">Welcome, {user.name}</span>
           <span className="bg-white rounded-full p-1">🙍‍♂️</span>
         </div>
       </header>
