@@ -4,13 +4,7 @@ import Topbar from "./components/Topbar";
 import Sidebar from "./components/Sidebar";
 
 const App = () => {
-  return (
-    <div>
-      {/* <Navbar /> */}
-      {/* <Topbar /> */}
-      <Sidebar />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default App;
