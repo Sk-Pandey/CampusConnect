@@ -1,9 +1,22 @@
-import React from 'react'
+import React from "react";
 
 const Topbar = () => {
   return (
-    <div>Topbar</div>
-  )
-}
+    <>
+      <header className="flex items-center justify-between p-2">
+        <span id="logo">
+          <h1 className="text-white text-3xl font-serif">CampusConnect</h1>
+        </span>
+        <div className="space-x-6">
+          <button className="cursor-pointer" id="notifications">
+            🔔
+          </button>
+          <span className="font-sans">Welcome, User</span>
+          <span className="bg-white rounded-full p-1">🙍‍♂️</span>
+        </div>
+      </header>
+    </>
+  );
+};
 
-export default Topbar
+export default Topbar;
