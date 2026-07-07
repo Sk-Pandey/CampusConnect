@@ -15,10 +15,15 @@ import DashboardHome from "../pages/shared/DashboardHome";
 import CoursesHome from "../pages/shared/CoursesHome";
 import ProtectedRoute from "../components/ProtectedRoute";
 import ErrorPage from "../pages/public/ErrorPage";
+import PublicRoute from "../components/PublicRoute";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PublicLayout />,
+    element: (
+      <PublicRoute>
+        <PublicLayout />
+      </PublicRoute>
+    ),
     children: [
       {
         index: true,
