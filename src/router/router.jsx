@@ -14,7 +14,7 @@ import CourseDetail from "../pages/shared/CourseDetail";
 import DashboardHome from "../pages/shared/DashboardHome";
 import CoursesHome from "../pages/shared/CoursesHome";
 import ProtectedRoute from "../components/ProtectedRoute";
-import ErrorPage from "../pages/public/Error";
+import ErrorPage from "../pages/public/ErrorPage";
 const router = createBrowserRouter([
   {
     path: "/",
