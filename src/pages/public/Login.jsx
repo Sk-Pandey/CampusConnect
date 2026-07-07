@@ -19,6 +19,13 @@ const Login = () => {
                 name: "Shashikant",
                 role: "student",
               });
+              localStorage.setItem(
+                "user",
+                JSON.stringify({
+                  name: "Shashikant",
+                  role: "student",
+                }),
+              );
               navigate("/dashboard");
             }}
             className="w-full rounded-xl bg-blue-600 py-3 text-lg font-semibold text-white transition hover:bg-blue-700"
@@ -32,6 +39,13 @@ const Login = () => {
                 name: "Admin",
                 role: "admin",
               });
+              localStorage.setItem(
+                "user",
+                JSON.stringify({
+                  name: "Admin",
+                  role: "admin",
+                }),
+              );
               navigate("/dashboard");
             }}
             className="w-full rounded-xl bg-green-600 py-3 text-lg font-semibold text-white transition hover:bg-green-700"

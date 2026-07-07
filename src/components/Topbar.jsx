@@ -6,6 +6,7 @@ const Topbar = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
     setUser({ name: "", role: "" });
+    localStorage.removeItem("user");
     navigate("/login");
   };
 
