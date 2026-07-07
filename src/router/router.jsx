@@ -19,11 +19,7 @@ import PublicRoute from "../components/PublicRoute";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <PublicRoute>
-        <PublicLayout />
-      </PublicRoute>
-    ),
+    element: <PublicLayout />,
     children: [
       {
         index: true,
@@ -39,7 +35,11 @@ const router = createBrowserRouter([
       },
       {
         path: "login",
-        element: <Login />,
+        element: (
+          <PublicRoute>
+            <Login />
+          </PublicRoute>
+        ),
       },
     ],
   },
