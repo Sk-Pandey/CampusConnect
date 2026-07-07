@@ -13,6 +13,8 @@ import Assignments from "../pages/students/Assignments";
 import CourseDetail from "../pages/shared/CourseDetail";
 import DashboardHome from "../pages/shared/DashboardHome";
 import CoursesHome from "../pages/shared/CoursesHome";
+import ProtectedRoute from "../components/ProtectedRoute";
+import ErrorPage from "../pages/public/Error";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,7 +40,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: (
+      <ProtectedRoute>
+        <DashboardLayout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         index: true,
@@ -73,6 +79,10 @@ const router = createBrowserRouter([
         element: <CourseDetail />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
   },
 ]);
 export default router;
